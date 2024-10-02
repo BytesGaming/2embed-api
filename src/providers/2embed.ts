@@ -74,7 +74,7 @@ export class TwoEmbed {
         const site_key: string = $("body").attr("data-recaptcha-key");
         
         const token = await getCaptchaToken(TwoEmbed.url, site_key);
-        const rabbitstream_url = await axios.get(`${TwoEmbed.url}/ajax/embed/play?id=
+        const rabbitstream_url = await axios.get(`${TwoEmbed.url}/embed/play?id=
                             ${source_id}&_token=${token}`,{ 
                                 headers: { 
                                     "Referer": TwoEmbed.url 
